@@ -1,0 +1,8 @@
+# Prettier ignore file Ignore all files in the root directory
+/. vscode
+/node_modules
+./dist
+
+*/.env
+.env
+.env.*
