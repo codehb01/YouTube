@@ -1,2 +1,18 @@
-console.log("Hello from backend!");
-console.log("This is nodemon running in the backend.");
+import dotenv from "dotenv";
+import { app } from "./app.js";
+import connectDB from "./db/index.js";
+
+dotenv.config({
+  path: "./.env",
+});
+
+connectDB()
+  .then(() => {
+    const PORT = process.env.PORT || 8000;
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("MongoDB Connection Error!");
+  });
