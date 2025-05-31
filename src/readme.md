@@ -96,7 +96,15 @@ src/
 - Add validation using `Joi` or `express-validator`
 - Use `helmet`, `cors`, `rate-limit` for security
 
-
 cookie-parser
 multer -multipart form data
+
 ---
+
+user.routes created to handle upload of avatar and banner using multer whose logic is in multer middleware
+
+then route is created in app.js where method in user.routes is called and its logic is in user.controller
+
+cloudinary.js for cloudinary handling and created middlewares multer.middlewares for image uploading task and error.middlewares for handling it
+
+user.controllers.js handles main logic of CRUD operations 
