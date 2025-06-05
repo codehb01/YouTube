@@ -14,6 +14,9 @@
 
 ### 🗂️ 2. **Project Structure**
 
+"app.js","index.js",".env",".env.sample" | ForEach-Object { New-Item $_ -ItemType File}
+'controllers','db','middlewares','models','routes','utils' | ForEach-Object { mkdir $_ }
+
 ```
 src/
 │
@@ -107,4 +110,5 @@ then route is created in app.js where method in user.routes is called and its lo
 
 cloudinary.js for cloudinary handling and created middlewares multer.middlewares for image uploading task and error.middlewares for handling it
 
-user.controllers.js handles main logic of CRUD operations 
+user.controllers.js handles main logic of CRUD operations
+user.controllers->user.routes->app.js
